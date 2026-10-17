@@ -1,0 +1,270 @@
+{
+  "known_test_accuracy": 0.954,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.55574233757125,
+      "train_acc": 0.7914444444444444,
+      "val_acc": 0.906
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.19433169094721475,
+      "train_acc": 0.926962962962963,
+      "val_acc": 0.945
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.10420409516603858,
+      "train_acc": 0.9618518518518518,
+      "val_acc": 0.9563333333333334
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.054742751011142024,
+      "train_acc": 0.9808518518518519,
+      "val_acc": 0.9636666666666667
+    }
+  ],
+  "best_method": "KNN-512D",
+  "ood_table": [
+    {
+      "Method": "MSP",
+      "Family": "Logit-Space",
+      "Known Accepted %": 94.22,
+      "Near-OOD Rej % (Val Thr)": 30.18,
+      "Near FPR@95 (Test Thr)": 73.82,
+      "Near AUROC (\u00b1Std)": "0.8562 \u00b1 0.0039",
+      "Near AUROC": 0.8562,
+      "SVHN Rej %": 33.55,
+      "SVHN AUROC": 0.9146,
+      "Noise Rej % (Sanity)": 98.45
+    },
+    {
+      "Method": "Entropy",
+      "Family": "Logit-Space",
+      "Known Accepted %": 94.3,
+      "Near-OOD Rej % (Val Thr)": 32.32,
+      "Near FPR@95 (Test Thr)": 70.75,
+      "Near AUROC (\u00b1Std)": "0.8590 \u00b1 0.0039",
+      "Near AUROC": 0.859,
+      "SVHN Rej %": 47.25,
+      "SVHN AUROC": 0.9297,
+      "Noise Rej % (Sanity)": 100.0
+    },
+    {
+      "Method": "Energy",
+      "Family": "Logit-Space",
+      "Known Accepted %": 94.37,
+      "Near-OOD Rej % (Val Thr)": 38.95,
+      "Near FPR@95 (Test Thr)": 63.35,
+      "Near AUROC (\u00b1Std)": "0.8402 \u00b1 0.0040",
+      "Near AUROC": 0.8402,
+      "SVHN Rej %": 85.55,
+      "SVHN AUROC": 0.9704,
+      "Noise Rej % (Sanity)": 100.0
+    },
+    {
+      "Method": "MaxLogit",
+      "Family": "Logit-Space",
+      "Known Accepted %": 94.47,
+      "Near-OOD Rej % (Val Thr)": 38.6,
+      "Near FPR@95 (Test Thr)": 63.32,
+      "Near AUROC (\u00b1Std)": "0.8414 \u00b1 0.0040",
+      "Near AUROC": 0.8414,
+      "SVHN Rej %": 84.08,
+      "SVHN AUROC": 0.9675,
+      "Noise Rej % (Sanity)": 100.0
+    },
+    {
+      "Method": "KNN-512D",
+      "Family": "Feature-Space",
+      "Known Accepted %": 95.23,
+      "Near-OOD Rej % (Val Thr)": 41.12,
+      "Near FPR@95 (Test Thr)": 57.68,
+      "Near AUROC (\u00b1Std)": "0.8873 \u00b1 0.0032",
+      "Near AUROC": 0.8873,
+      "SVHN Rej %": 84.55,
+      "SVHN AUROC": 0.9739,
+      "Noise Rej % (Sanity)": 100.0
+    },
+    {
+      "Method": "Fusion (Energy+KNN)",
+      "Family": "Hybrid",
+      "Known Accepted %": 95.18,
+      "Near-OOD Rej % (Val Thr)": 40.25,
+      "Near FPR@95 (Test Thr)": 59.13,
+      "Near AUROC (\u00b1Std)": "0.8723 \u00b1 0.0034",
+      "Near AUROC": 0.8723,
+      "SVHN Rej %": 86.32,
+      "SVHN AUROC": 0.9748,
+      "Noise Rej % (Sanity)": 100.0
+    }
+  ],
+  "comparison_table": [
+    {
+      "Setup": "No uncertainty handling",
+      "Known Accepted %": 100.0,
+      "Accuracy on Accepted Known %": 95.4,
+      "Near-OOD Rejected %": 0.0,
+      "SVHN Rejected %": 0.0,
+      "Overall System Accuracy %": 57.24
+    },
+    {
+      "Setup": "With MSP",
+      "Known Accepted %": 94.22,
+      "Accuracy on Accepted Known %": 97.49,
+      "Near-OOD Rejected %": 30.18,
+      "SVHN Rejected %": 33.55,
+      "Overall System Accuracy %": 67.18
+    },
+    {
+      "Setup": "With Entropy",
+      "Known Accepted %": 94.3,
+      "Accuracy on Accepted Known %": 97.51,
+      "Near-OOD Rejected %": 32.32,
+      "SVHN Rejected %": 47.25,
+      "Overall System Accuracy %": 68.1
+    },
+    {
+      "Setup": "With Energy",
+      "Known Accepted %": 94.37,
+      "Accuracy on Accepted Known %": 96.71,
+      "Near-OOD Rejected %": 38.95,
+      "SVHN Rejected %": 85.55,
+      "Overall System Accuracy %": 70.34
+    },
+    {
+      "Setup": "With MaxLogit",
+      "Known Accepted %": 94.47,
+      "Accuracy on Accepted Known %": 96.79,
+      "Near-OOD Rejected %": 38.6,
+      "SVHN Rejected %": 84.08,
+      "Overall System Accuracy %": 70.3
+    },
+    {
+      "Setup": "With KNN-512D",
+      "Known Accepted %": 95.23,
+      "Accuracy on Accepted Known %": 96.52,
+      "Near-OOD Rejected %": 41.12,
+      "SVHN Rejected %": 84.55,
+      "Overall System Accuracy %": 71.6
+    },
+    {
+      "Setup": "With Fusion (Energy+KNN)",
+      "Known Accepted %": 95.18,
+      "Accuracy on Accepted Known %": 96.6,
+      "Near-OOD Rejected %": 40.25,
+      "SVHN Rejected %": 86.32,
+      "Overall System Accuracy %": 71.27
+    }
+  ],
+  "thresholds": {
+    "MSP": 0.7852900624275208,
+    "Entropy": -0.565519392490387,
+    "Energy": 5.067808151245117,
+    "MaxLogit": 4.874051094055176,
+    "KNN-512D": -0.6088535368442536,
+    "Fusion (Energy+KNN)": -1.738263571264343
+  },
+  "temperature": 1.151875376701355,
+  "ece_before": 0.014493941028912815,
+  "ece_after": 0.010571955700715339,
+  "frozen_backbone_ablation": {
+    "auroc": 0.8824337291666667,
+    "auroc_std": 0.003148605919554412,
+    "near_ood_rej_pct": 32.800000000000004
+  },
+  "consensus_failures_count": 1858,
+  "consensus_failures_pct": 46.45,
+  "corruption_table": [
+    {
+      "corruption": "clean",
+      "accuracy %": 95.4,
+      "15-bin ECE": 0.0145,
+      "mean MSP conf": 0.968,
+      "rejected % (Entropy)": 5.7,
+      "rejected % (Energy)": 5.63,
+      "rejected % (KNN-512D)": 4.77
+    },
+    {
+      "corruption": "gaussian noise",
+      "accuracy %": 26.3,
+      "15-bin ECE": 0.6451,
+      "mean MSP conf": 0.908,
+      "rejected % (Entropy)": 19.72,
+      "rejected % (Energy)": 56.47,
+      "rejected % (KNN-512D)": 91.45
+    },
+    {
+      "corruption": "blur",
+      "accuracy %": 33.93,
+      "15-bin ECE": 0.4536,
+      "mean MSP conf": 0.793,
+      "rejected % (Entropy)": 48.85,
+      "rejected % (Energy)": 82.93,
+      "rejected % (KNN-512D)": 78.88
+    },
+    {
+      "corruption": "dark (low light)",
+      "accuracy %": 91.1,
+      "15-bin ECE": 0.0309,
+      "mean MSP conf": 0.94,
+      "rejected % (Entropy)": 11.53,
+      "rejected % (Energy)": 17.1,
+      "rejected % (KNN-512D)": 14.48
+    },
+    {
+      "corruption": "jpeg quality 10",
+      "accuracy %": 57.6,
+      "15-bin ECE": 0.2243,
+      "mean MSP conf": 0.8,
+      "rejected % (Entropy)": 44.73,
+      "rejected % (Energy)": 64.1,
+      "rejected % (KNN-512D)": 63.2
+    }
+  ],
+  "noise_severity_sweep": [
+    {
+      "Noise Sigma": 0,
+      "Accuracy %": 95.4,
+      "ECE (15-bin)": 0.0145,
+      "Energy Rej %": 5.63,
+      "KNN-512D Rej %": 4.77
+    },
+    {
+      "Noise Sigma": 10,
+      "Accuracy %": 83.98,
+      "ECE (15-bin)": 0.0886,
+      "Energy Rej %": 19.77,
+      "KNN-512D Rej %": 21.18
+    },
+    {
+      "Noise Sigma": 20,
+      "Accuracy %": 38.65,
+      "ECE (15-bin)": 0.5038,
+      "Energy Rej %": 51.18,
+      "KNN-512D Rej %": 74.75
+    },
+    {
+      "Noise Sigma": 35,
+      "Accuracy %": 18.3,
+      "ECE (15-bin)": 0.7425,
+      "Energy Rej %": 72.2,
+      "KNN-512D Rej %": 99.82
+    },
+    {
+      "Noise Sigma": 50,
+      "Accuracy %": 16.78,
+      "ECE (15-bin)": 0.7319,
+      "Energy Rej %": 96.17,
+      "KNN-512D Rej %": 100.0
+    }
+  ],
+  "per_unknown_class_rejection_pct": {
+    "bird": 57.1,
+    "deer": 32.1,
+    "frog": 43.2,
+    "horse": 32.1
+  }
+}
